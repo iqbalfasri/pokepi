@@ -97,3 +97,30 @@ body {
   transition: transform 0.2s all ease-in-out;
   transform: scale(0.99);
 }
+
+
+/*
+  Loading modal
+*/
+.loading-modal {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+  height: 100vh;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.7);
+}
+.loading-modal img {
+  display: block;
+  margin: 0 auto;
+  width: 150px;
+  height: 150px;
+  border-radius: 100%;
+}
+.loading-modal p {
+  color: #678deb;
+  line-height: 42px;
+}

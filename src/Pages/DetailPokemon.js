@@ -1,8 +1,11 @@
-import React, { useEffect, useState } from "react";
+import React, { Fragment, useEffect, useState } from "react";
 import { fetchData } from "../lib";
+
+import LoadingModal from "../Components/LoadingModal";
 
 function DetailPokemon(props) {
   const [detailPokemon, setDetailPokemon] = useState(null);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     async function getDetailPokemon() {
@@ -34,16 +37,22 @@ function DetailPokemon(props) {
       }`;
 
       const { pokemon } = await fetchData(query);
-      console.log(pokemon);
+      setDetailPokemon(pokemon);
     }
 
     getDetailPokemon();
   }, []);
 
+  if (loading) {
+    return <LoadingModal />;
+  }
+
   return (
-    <div>
-      <h1>Detail Pokemon</h1>
-    </div>
+    <Fragment>
+      <div className="container">
+        <h1>{detailPokemon.name}</h1>
+      </div>
+    </Fragment>
   );
 }
 
