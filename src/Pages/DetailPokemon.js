@@ -38,6 +38,7 @@ function DetailPokemon(props) {
 
       const { pokemon } = await fetchData(query);
       setDetailPokemon(pokemon);
+      setLoading(!loading)
     }
 
     getDetailPokemon();
