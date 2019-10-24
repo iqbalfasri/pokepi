@@ -7,6 +7,8 @@ body {
   background-position: center;
   background-attachment: fixed;
   background-size: cover;
+
+  font-family: "Hammersmith One", sans-serif;
 }
 
 /*
@@ -28,7 +30,6 @@ body {
   text-decoration: none;
   background-color: #fff;
   text-transform: capitalize;
-  font-family: "Hammersmith One", sans-serif;
 }
 .pokemon-card:hover {
   transform: scale(0.99);
@@ -68,4 +69,31 @@ body {
   padding: 80px 0 50px;
   text-align: center;
   font-family: "Baloo Bhai", cursive;
+}
+
+/*
+  Button style
+*/
+.load-more {
+  display: block;
+  margin: 30px auto 120px;
+
+  outline: none;
+  border: none;
+
+  padding: 10px 80px;
+  background-color: #f8d561;
+
+  color: #678deb;
+  font-size: 20px;
+
+  letter-spacing: 2px;
+
+  border-radius: 5px;
+}
+.load-more:hover,
+.load-more:focus {
+  outline: none;
+  transition: transform 0.2s all ease-in-out;
+  transform: scale(0.99);
 }

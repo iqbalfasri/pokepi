@@ -40,7 +40,7 @@ function Home() {
     <div>
       <h1 className="main-title">Pokepi Pokémon</h1>
       <PokemonList pokemons={pokemons} />
-      <button onClick={() => handlePaginate()}>More</button>
+      <button className="load-more" onClick={() => handlePaginate()}>More</button>
     </div>
   );
 }
