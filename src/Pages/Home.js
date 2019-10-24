@@ -33,7 +33,7 @@ function Home() {
    * Simple pagination, trigger with button
    */
   const handlePaginate = () => {
-    setPagination(pagination + 4);
+    setPagination(pagination + 8);
   };
 
   return (
