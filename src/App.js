@@ -11,7 +11,7 @@ function App() {
     <Fragment>
       <Switch>
         <Route exact path="/" component={Home} />
-        <Route path="/detail-pokemon" component={DetailPokemon} />
+        <Route path="/detail/:id" component={DetailPokemon} />
       </Switch>
     </Fragment>
   );
