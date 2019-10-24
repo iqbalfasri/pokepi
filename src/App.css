@@ -1,4 +1,5 @@
 @import url("https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css");
+@import url("https://fonts.googleapis.com/css?family=Baloo+Bhai&display=swap");
 
 body {
   background-image: url("https://i.pinimg.com/originals/1c/a6/e1/1ca6e1c35e2d884230242cc0326dbf28.jpg");
@@ -7,25 +8,24 @@ body {
   background-size: cover;
 }
 
-.App {
+/*
+  Card style
+*/
+.pokemon-card {
+  background-color: #fff;
+  width: 100%;
+  display: block;
+  margin: 10px 0;
+  padding: 10px;
+}
+
+/*
+  Text style
+*/
+.main-title {
+  color: #f8d561;
+  font-size: 52px;
+  padding: 80px;
   text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #09d3ac;
+  font-family: "Baloo Bhai", cursive;
 }
