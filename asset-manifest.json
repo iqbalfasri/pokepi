@@ -1,21 +1,21 @@
 {
   "files": {
-    "main.css": "/pokepi/static/css/main.6f4a17e3.chunk.css",
-    "main.js": "/pokepi/static/js/main.0de1e2ed.chunk.js",
-    "main.js.map": "/pokepi/static/js/main.0de1e2ed.chunk.js.map",
+    "main.css": "/pokepi/static/css/main.b192a910.chunk.css",
+    "main.js": "/pokepi/static/js/main.952b4fa2.chunk.js",
+    "main.js.map": "/pokepi/static/js/main.952b4fa2.chunk.js.map",
     "runtime-main.js": "/pokepi/static/js/runtime-main.f3f0a615.js",
     "runtime-main.js.map": "/pokepi/static/js/runtime-main.f3f0a615.js.map",
-    "static/js/2.630a6dd6.chunk.js": "/pokepi/static/js/2.630a6dd6.chunk.js",
-    "static/js/2.630a6dd6.chunk.js.map": "/pokepi/static/js/2.630a6dd6.chunk.js.map",
+    "static/js/2.58b0f929.chunk.js": "/pokepi/static/js/2.58b0f929.chunk.js",
+    "static/js/2.58b0f929.chunk.js.map": "/pokepi/static/js/2.58b0f929.chunk.js.map",
     "index.html": "/pokepi/index.html",
-    "precache-manifest.40e03c47376ebd293e6b81320d515279.js": "/pokepi/precache-manifest.40e03c47376ebd293e6b81320d515279.js",
+    "precache-manifest.bce4a8bc0e9259eb0ff4aad5c3ec6b8a.js": "/pokepi/precache-manifest.bce4a8bc0e9259eb0ff4aad5c3ec6b8a.js",
     "service-worker.js": "/pokepi/service-worker.js",
-    "static/css/main.6f4a17e3.chunk.css.map": "/pokepi/static/css/main.6f4a17e3.chunk.css.map"
+    "static/css/main.b192a910.chunk.css.map": "/pokepi/static/css/main.b192a910.chunk.css.map"
   },
   "entrypoints": [
     "static/js/runtime-main.f3f0a615.js",
-    "static/js/2.630a6dd6.chunk.js",
-    "static/css/main.6f4a17e3.chunk.css",
-    "static/js/main.0de1e2ed.chunk.js"
+    "static/js/2.58b0f929.chunk.js",
+    "static/css/main.b192a910.chunk.css",
+    "static/js/main.952b4fa2.chunk.js"
   ]
 }
