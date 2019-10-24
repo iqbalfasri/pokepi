@@ -1,42 +1,41 @@
 import React, { useEffect, useState } from "react";
 
 import PokemonList from "../Components/PokemonList";
+import { fetchData } from "../lib";
 
 function Home() {
-  const INITIAL_OFFSET_LIMIT = 20;
+  const INITIAL_LIMIT = 20;
   const [pokemons, setPokemons] = useState([]);
-  const [limit, setLimit] = useState(INITIAL_OFFSET_LIMIT);
-  const [offset, setOffet] = useState(INITIAL_OFFSET_LIMIT);
+  const [limit, setLimit] = useState(INITIAL_LIMIT);
+  const [offset, setOffet] = useState(0);
 
   useEffect(() => {
     async function getPokemons() {
-      try {
-        const URL_API = `https://pokeapi.co/api/v2/pokemon/?limit=${limit}&offset=${offset}`;
-        const response = await fetch(URL_API);
-        const responseToJson = await response.json();
-        const { results } = responseToJson;
+      const initPagination = 8;
+      let fetchTimes = 1;
 
-        // set state pokemons
-        setPokemons(results);
-      } catch (error) {
-        console.error(error);
-      }
+      // grapql query
+      const query = `query {
+        pokemons(first: ${fetchTimes * initPagination}) {
+          id,
+          image,
+          name
+        }
+      }`;
+      const { pokemons } = await fetchData(query);
+
+      setPokemons(pokemons);
+      fetchTimes += 1;
     }
 
     getPokemons();
-  }, [pokemons]);
-
-  const handlePaginate = () => {
-    alert("Yuhu")
-    setLimit(limit + 20);
-    setOffet(offset + 20);
-  };
+  }, [limit, offset]);
 
   return (
     <div>
-      <h1>Pokepi Pokémon</h1>
+      <h1 className="main-title">Pokepi Pokémon</h1>
       <PokemonList pokemons={pokemons} />
-      <button onClick={() => handlePaginate()}>More</button>
+      {/* <button onClick={() => handlePaginate()}>More</button> */}
     </div>
   );
 }
