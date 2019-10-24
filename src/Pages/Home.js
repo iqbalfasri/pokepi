@@ -8,15 +8,14 @@ function Home() {
   const [pokemons, setPokemons] = useState([]);
   const [limit, setLimit] = useState(INITIAL_LIMIT);
   const [offset, setOffet] = useState(0);
+  const [fetchTimes, setFetchTimes] = useState(1);
+  const [pagination, setPagination] = useState(8);
 
   useEffect(() => {
     async function getPokemons() {
-      const initPagination = 8;
-      let fetchTimes = 1;
-
       // grapql query
       const query = `query {
-        pokemons(first: ${fetchTimes * initPagination}) {
+        pokemons(first: ${fetchTimes * pagination}) {
           id,
           image,
           name
@@ -25,17 +24,23 @@ function Home() {
       const { pokemons } = await fetchData(query);
 
       setPokemons(pokemons);
-      fetchTimes += 1;
     }
 
     getPokemons();
-  }, [limit, offset]);
+  }, [pokemons]);
+
+  /**
+   * Simple pagination, trigger with button
+   */
+  const handlePaginate = () => {
+    setPagination(pagination + 4);
+  };
 
   return (
     <div>
       <h1 className="main-title">Pokepi Pokémon</h1>
       <PokemonList pokemons={pokemons} />
-      {/* <button onClick={() => handlePaginate()}>More</button> */}
+      <button onClick={() => handlePaginate()}>More</button>
     </div>
   );
 }
