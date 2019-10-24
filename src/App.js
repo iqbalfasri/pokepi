@@ -4,12 +4,14 @@ import "./App.css";
 
 // pages
 import Home from "./Pages/Home";
+import DetailPokemon from "./Pages/DetailPokemon";
 
 function App() {
   return (
     <Fragment>
       <Switch>
-        <Route path="/" component={Home} />
+        <Route exact path="/" component={Home} />
+        <Route path="/detail-pokemon" component={DetailPokemon} />
       </Switch>
     </Fragment>
   );
