@@ -5,7 +5,7 @@ import GifImage from "../loading-gif.gif";
 function LoadingModal() {
   return (
     <div className="loading-modal">
-      <img src={GifImage} />
+      <img alt="Loading gif" src={GifImage} />
       <p>Loading...</p>
     </div>
   );
