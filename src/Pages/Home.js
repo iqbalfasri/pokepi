@@ -48,7 +48,7 @@ function Home() {
       <PokemonList pokemons={pokemons} />
       <button
         id="load-more"
-        className="load-more"
+        className="button"
         onClick={() => handlePaginate()}
       >
         More

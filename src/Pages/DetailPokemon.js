@@ -1,8 +1,10 @@
 import React, { Fragment, useEffect, useState } from "react";
-import { fetchData } from "../lib";
+import { Link } from "react-router-dom";
 
 import LoadingModal from "../Components/LoadingModal";
 import PokemonList from "../Components/PokemonList";
+
+import { fetchData } from "../lib";
 
 function DetailPokemon(props) {
   const [detailPokemon, setDetailPokemon] = useState(null);
@@ -133,6 +135,12 @@ function DetailPokemon(props) {
             )}
           </div>
         </div>
+      </div>
+
+      <div className="container">
+        <Link to="/" className="button">
+          Back to list
+        </Link>
       </div>
     </Fragment>
   );
