@@ -103,7 +103,6 @@ body {
   opacity: 0.5;
 }
 .pokemon-detail__wrapper-evolutions {
-  background: red;
   display: flex;
   align-items: center;
   justify-content: center;
