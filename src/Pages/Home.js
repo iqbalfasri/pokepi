@@ -24,7 +24,7 @@ function Home() {
     }
 
     getPokemons();
-  }, [pokemons]);
+  }, [pagination]);
 
   /**
    * Simple pagination, trigger with button
