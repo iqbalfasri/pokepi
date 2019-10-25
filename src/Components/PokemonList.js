@@ -1,7 +1,5 @@
 import React from "react";
 
-import { Link } from "react-router-dom";
-
 function PokemonList({ pokemons, disableLink }) {
   return (
     <div className="container">
