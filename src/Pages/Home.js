@@ -4,11 +4,8 @@ import PokemonList from "../Components/PokemonList";
 import { fetchData } from "../lib";
 
 function Home() {
-  const INITIAL_LIMIT = 20;
+  const fetchTimes = 1;
   const [pokemons, setPokemons] = useState([]);
-  const [limit, setLimit] = useState(INITIAL_LIMIT);
-  const [offset, setOffet] = useState(0);
-  const [fetchTimes, setFetchTimes] = useState(1);
   const [pagination, setPagination] = useState(8);
 
   useEffect(() => {
@@ -40,7 +37,9 @@ function Home() {
     <div>
       <h1 className="main-title">Pokepi Pokémon</h1>
       <PokemonList pokemons={pokemons} />
-      <button className="load-more" onClick={() => handlePaginate()}>More</button>
+      <button className="load-more" onClick={() => handlePaginate()}>
+        More
+      </button>
     </div>
   );
 }
