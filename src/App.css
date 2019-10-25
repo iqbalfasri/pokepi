@@ -10,6 +10,9 @@ body {
 
   font-family: "Hammersmith One", sans-serif;
 }
+#root {
+  height: 100vh;
+}
 
 /*
   Card style
@@ -61,6 +64,52 @@ body {
 }
 
 /*
+  Pokemon detail style
+*/
+.pokemon-detail__wrapper {
+  margin: 80px 0 50px;
+  padding: 30px 50px;
+  border-radius: 5px;
+  box-sizing: border-box;
+  background-color: white;
+}
+.pokemon-detail__wrapper h1 {
+  color: #678deb;
+  text-align: center;
+}
+.pokemon-detail__name {
+  width: 100%;
+  padding: 30px 0 5px;
+  text-align: center;
+  box-sizing: border-box;
+}
+.pokemon-detail__name h1 {
+  color: #678deb;
+  font-size: 42px;
+}
+.pokemon-detail__info {
+  /* background-color: red; */
+  margin-bottom: 40px;
+}
+.pokemon-detail__info h3 {
+  font-size: 32px;
+  line-height: 42px;
+  padding-bottom: 10px;
+  letter-spacing: 3px;
+}
+.pokemon-detail__info p {
+  line-height: 8px;
+  color: #000000;
+  opacity: 0.5;
+}
+.pokemon-detail__wrapper-evolutions {
+  background: red;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/*
   Text style
 */
 .main-title {
@@ -97,7 +146,6 @@ body {
   transition: transform 0.2s all ease-in-out;
   transform: scale(0.99);
 }
-
 
 /*
   Loading modal
