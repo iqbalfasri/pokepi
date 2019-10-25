@@ -42,7 +42,7 @@ function DetailPokemon(props) {
     }
 
     getDetailPokemon();
-  }, []);
+  });
 
   if (loading) {
     return <LoadingModal />;
